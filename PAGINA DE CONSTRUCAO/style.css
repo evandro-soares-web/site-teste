@@ -1,0 +1,136 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url(bg.jpeg);
+	background-repeat: no-repeat;
+	background-attachment: local;
+	background-size: cover;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    opacity: 0.8;
+
+background: rgba(21,52,83,1);
+background: -moz-linear-gradient(-45deg, rgba(21,52,83,1) 0%, rgba(21,52,83,1) 27%, rgba(217,130,190,1) 100%);
+background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(21,52,83,1)), color-stop(27%, rgba(21,52,83,1)), color-stop(100%, rgba(217,130,190,1)));
+background: -webkit-linear-gradient(-45deg, rgba(21,52,83,1) 0%, rgba(21,52,83,1) 27%, rgba(217,130,190,1) 100%);
+background: -o-linear-gradient(-45deg, rgba(21,52,83,1) 0%, rgba(21,52,83,1) 27%, rgba(217,130,190,1) 100%);
+background: -ms-linear-gradient(-45deg, rgba(21,52,83,1) 0%, rgba(21,52,83,1) 27%, rgba(217,130,190,1) 100%);
+background: linear-gradient(135deg, rgba(21,52,83,1) 0%, rgba(21,52,83,1) 27%, rgba(217,130,190,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#153453', endColorstr='#d982be', GradientType=1 );
+
+}
+
+.info-card {
+    display: flex;
+    align-content: stretch;
+    background: #ffffff;
+    border-radius: 5px;
+    padding: 30px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 20px;
+	justify-content: center;
+}
+
+.logo img {
+	display: flex;
+	flex-direction: column;
+	max-height: 100px;
+}
+
+.logo h1.title {
+    margin: 0px;
+    text-align: center;
+    font-weight: 300;
+}
+
+.contato h2.title {
+	margin: 0;
+	padding-bottom: 20px;
+}
+
+.info-card .title {
+    color: #0c3b67;
+    font-weight: 300;
+    font-size: 24px;
+}
+
+.info-card a, .info-card p {
+    font-weight: 300;
+    font-size: 19px;
+    color: #0c3b67;
+    text-decoration: none;
+}
+
+.info-card .contato p {
+    margin: 0 0 10px;
+	font-weight: 700;
+}
+
+.info-card .contato > p:last-child {
+    margin: 0;
+}
+
+.info-card p {
+    margin: 0;
+}
+
+.contato {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 20px;
+    border-left: 1px solid #00426e;
+}
+
+@media (max-width: 768px) {
+    .info-card {
+        flex-direction: column;
+        margin: 20px;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .logo img {
+	    max-height: 80px;
+    }
+    
+    .logo, .contato {
+        padding: 0;
+    }
+    
+    .contato {
+        border-left: 0;
+        border-top: 1px solid #00426e;
+        padding-top: 20px;
+    }
+    
+    .logo {
+        padding-bottom: 20px;
+    }
+    
+    .info-card .title {
+        font-size: 20px;
+    }
+}
